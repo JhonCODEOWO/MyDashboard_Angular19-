@@ -10,8 +10,5 @@ import { routes } from '../app.routes';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class DashboardComponent {
-  menuItems = routes.map(r => r.children ?? [])
-    .flat()
-    .filter(route=> route && route.path && route.path != '**')
-    .filter(route => route && route.path && !route.path.includes(':'))
+
 }
