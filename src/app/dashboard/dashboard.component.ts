@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { SideMenuComponent } from "../shared/components/side-menu/side-menu.component";
+import { SideMenuComponent } from '@shared/components/side-menu/side-menu.component';
 import { routes } from '../app.routes';
 
 @Component({
