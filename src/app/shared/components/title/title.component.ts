@@ -13,7 +13,6 @@ import { booleanAttribute, ChangeDetectionStrategy, Component, Input, input, sig
 })
 export class TitleComponent {
   title = input.required(); //Required con signals
-  @Input({required: true}) title2!: string;
   @Input({transform: booleanAttribute}) withShadow: boolean = false;
-  withShadow2 = input.required({transform: booleanAttribute}); //Transform en signal
+  withShadow2 = input({transform: booleanAttribute}); //Transform en signal
 }
