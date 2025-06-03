@@ -1,8 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { HeavyLoadersFastComponent } from '@shared/components/heavy-loaders/heavy-laoders-fast.component';
+import { TitleComponent } from '@shared/components/title/title.component';
 
 @Component({
   selector: 'app-defer-options',
-  imports: [],
+  imports: [HeavyLoadersFastComponent, TitleComponent],
   templateUrl: './defer-options.component.html',
   styles: `
     :host {
@@ -11,4 +13,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class DeferOptionsComponent { }
+export default class DeferOptionsComponent {
+  constructor(){
+    console.log('Heavy fast loader cargado');
+  }
+}

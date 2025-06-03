@@ -1,9 +1,12 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, Input, input } from '@angular/core';
 
 @Component({
   selector: 'app-heavy-loaders-Fast',
-  imports: [],
-  template: `<h1>Hola mundo</h1>`,
+  imports: [CommonModule],
+  template: `<section [ngClass]="['w-full', cssClass]">
+    <ng-content/>
+  </section>`,
   styles: `
     :host {
       display: block;
@@ -11,4 +14,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HeavyLoadersFastComponent { }
+export class HeavyLoadersFastComponent {
+  @Input({required: true}) cssClass!: string;
+}
